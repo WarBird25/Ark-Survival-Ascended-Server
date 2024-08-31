@@ -52,12 +52,9 @@ determine_map_path() {
     MAP_PATH="TheCenter_WP"
     ;;
   *)
-    # Check if the custom MAP_NAME already ends with '_WP'
-    if [[ "$MAP_NAME" == *"_WP" ]]; then
-      MAP_PATH="$MAP_NAME"
-    else
-      MAP_PATH="${MAP_NAME}_WP"
-    fi
+    
+    MAP_PATH="$MAP_NAME"
+
     echo "Using map: $MAP_PATH"
     ;;
   esac
